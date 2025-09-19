@@ -35,9 +35,9 @@ on:
       - '"main"'
 
 env:
-  PROJECT_ID: 'my-project' # TODO: update to your Google Cloud project ID
-  REGION: 'us-central1' # TODO: update to your region
-  SERVICE: 'my-service' # TODO: update to your service name
+  PROJECT_ID: 'white-caster-229608' # TODO: update to your Google Cloud project ID
+  REGION: 'europe-north2' # TODO: update to your region
+  SERVICE: '105848335935964461422' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider' # TODO: update to your workload identity provider
 
 jobs:
