@@ -38,7 +38,7 @@ env:
   PROJECT_ID: 'white-caster-229608' # TODO: update to your Google Cloud project ID
   REGION: 'europe-north2' # TODO: update to your region
   SERVICE: '105848335935964461422' # TODO: update to your service name
-  WORKLOAD_IDENTITY_PROVIDER: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider' # TODO: update to your workload identity provider
+  WORKLOAD_IDENTITY_PROVIDER: 'projects/902329398580/locations/global/workloadIdentityPools/github/providers/my-repo' # TODO: update to your workload identity provider
 
 jobs:
   deploy:
@@ -60,7 +60,7 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v3' # google-github-actions/auth@v3
         with:
-          project_id: 'white-caster-229608'
+          project_id: '${{ env.PROJECT_ID }}'
           workload_identity_provider: '${{ env.WORKLOAD_IDENTITY_PROVIDER }}'
 
       # BEGIN - Docker auth and build
