@@ -1,2 +1,8 @@
 # Ignore generated credentials from google-github-actions/auth
 gha-creds-*.json
+
+# Ignore environment variable files
+.env
+
+# Node modules
+node_modules/

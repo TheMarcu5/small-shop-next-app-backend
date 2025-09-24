@@ -1,5 +1,4 @@
 import express from "express";
-import bodyParser from "body-parser";
 import cors from "cors";
 import crypto from "crypto";
 import dotenv from "dotenv";
@@ -14,6 +13,7 @@ const products = [
   { id: 1, slug: "red-sneakers", name: "Red sneakers", price: 10.0 },
   { id: 2, slug: "blue-tshirt", name: "Blue T-shirt", price: 20.0 },
   { id: 3, slug: "black-socks", name: "Black socks", price: 3.0 },
+  { id: 4, slug: "white-paper", name: "white paper", price: 35.0 },
 ];
 
 // GET /products/:slug
