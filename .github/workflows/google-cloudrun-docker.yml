@@ -39,6 +39,7 @@ env:
   REGION: 'europe-north2' # TODO: update to your region
   SERVICE: '105848335935964461422' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: 'projects/902329398580/locations/global/workloadIdentityPools/github/providers/my-repo' # TODO: update to your workload identity provider
+  SERVICE_ACCOUNT: 'github-action-sa@white-caster-229608.iam.gserviceaccount.com'
 
 jobs:
   deploy:
@@ -62,6 +63,11 @@ jobs:
         with:
           project_id: '${{ env.PROJECT_ID }}'
           workload_identity_provider: '${{ env.WORKLOAD_IDENTITY_PROVIDER }}'
+          service_account: '${{ env.SERVICE_ACCOUNT }}'
+    
+      - name: Access secret
+        run: |
+          gcloud secrets versions access latest --secret="my-secret"
 
       # BEGIN - Docker auth and build
       #
